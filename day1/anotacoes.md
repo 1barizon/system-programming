@@ -32,7 +32,7 @@ cada 0x100 -> tem 8 bits - cada valor em hex tem exatamente 4 bits, f = (1111), 
 ## Bit wise operation
 
 - Operadores:
-  and => &
-  or => |
-  xor => ^
-  not => ~
+  - and => &
+  - or => |
+  - xor => ^
+  - not => ~
