@@ -28,3 +28,11 @@ big endian: 0x100 -> (01), 0x101 -> (23), 0x102 -> (45), 0x103 -> (67)
 little endian: 0x100 -> (67), 0x101 -> (45), 0x102 -> (23), 0x103 -> (01)
 
 cada 0x100 -> tem 8 bits - cada valor em hex tem exatamente 4 bits, f = (1111), cada um fica com doi digitos do valor em hex para completar os 8 bits do byte
+
+## Bit wise operation
+
+- Operadores:
+  and => &
+  or => |
+  xor => ^
+  not => ~
