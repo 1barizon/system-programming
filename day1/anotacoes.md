@@ -4,6 +4,20 @@ os tipos: (int64_t/ uint64_t) e (int32_t/uint32_t) possuem tamanhos fixos indepe
 
 # Addressing and Byte Ordering
 
+
+
+* typedef unsigned char
+    *byte_pointer;
+
+    * esse e um ponteiro -> uma variavel "especial" que vai apontar para um endereco de memoria, mas esse ponteiro ele tem 1byte, ou seja o endereco de memoria que ele vai guardar vai ser de1 byte
+
+    * quando associamos byte_pointer ptr = &inteiro   
+    estamos pegando o endereco de memoria de um inteiro (que possui 4 bytes) e pegando o primeiro byte, pois ele vai ser alocado em um tipo que so comporta 1 byte
+
+    * fazendo aritimetica de memoria nos conseguimos navegar de byte em byte como esta no codigo byte_representation.c
+
+
+
 - Na maquina virtual, um objeto multi-byte e armazenado como uma sequencia continua de bytes, com o endereco do objeto sendo o menor endereco dos bytes usados
 
 exemplo:
@@ -36,3 +50,20 @@ cada 0x100 -> tem 8 bits - cada valor em hex tem exatamente 4 bits, f = (1111), 
   - or => |
   - xor => ^
   - not => ~
+
+- Na soma todo numero x tem o seu inverso aditivo -x no qual x+(-x)=0, no caso da operacao ^ que seria a "adicao", temos a ^ a = 0
+
+## Bit shift
+* left shift
+x << j , descola os bits de x , j vezes para a esquerda preenchendo 
+
+* right shift
+x >> j, descola para a direita porem temos o logical shift que preenche com 0 e o aritimetico que preenche com o valor do bit mais significante
+
+
+## Uso do char
+* o char e comumente usado para caracteres pois podemos pegar e printar baseado na tabela ASCII, porem o char nao e diferente de um inteiro pequeno de somente 1 byte, entao
+char c = "A";
+printf("caracteres: %c\n", c); // imprime: A
+printf("caracteres: %d\n", c); // imprime: 65 
+
